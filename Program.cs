@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Lab_6.Blue_1;
 using static Lab_6.Blue_2;
+using static Lab_6.Blue_3;
 using static Lab_6.Blue_4;
 using static Lab_6.Blue_5;
 
