@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab_6
 {
-    internal class Blue_2
+    public class Blue_2
     {
         public struct Participant
         {
@@ -71,7 +71,7 @@ namespace Lab_6
                         _marks[0, i] = result[i];
                     }
                 }
-                else if (_marks[1, 0] == 0 && _marks[1, 1] == 0 && _marks[1, 2] == 0 && _marks[1, 3] == 0 && _marks[1, 4] == 0)
+                else  if (_marks[1, 0] == 0 && _marks[1, 1] == 0 && _marks[1, 2] == 0 && _marks[1, 3] == 0 && _marks[1, 4] == 0)
                 {
                     for (int i = 0; i < 5; i++)
                     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_6
 {
-    internal class Blue_5
+    public class Blue_5
     {
         public struct Sportsman
         {
@@ -76,7 +76,7 @@ namespace Lab_6
                 get
                 {
                     if (_sportsmen == null) return 0;
-                    int max = int.MaxValue;
+                    int max = 18;
                     for (int i = 0; i < _sportsmen.Length; i++)
                     {
                         if (_sportsmen[i].Place < max) max = _sportsmen[i].Place;
@@ -97,15 +97,15 @@ namespace Lab_6
             public void Add(Sportsman sportsman)
             {
                 if (_sportsmen == null || _cnt >= 6) return;
-                _sportsmen[_cnt++] = sportsman;
+                _sportsmen[_cnt] = sportsman;
+                _cnt++;
             }
             public void Add(Sportsman[] sportsman)
             {
-                if (sportsman == null || _cnt >= 6) return;
-                int i = 0;
-                while (_cnt < 6)
+                if (_cnt >= 6 || _sportsmen == null) return;
+                foreach (var s in sportsman)
                 {
-                    Add(sportsman[i++]);
+                    Add(s);
                 }
             }
 
