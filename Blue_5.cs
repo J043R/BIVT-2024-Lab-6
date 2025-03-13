@@ -75,11 +75,11 @@ namespace Lab_6
             {
                 get
                 {
-                    if (_sportsmen == null) return 0;
+                    if (_sportsmen == null) return 18;
                     int max = 18;
                     for (int i = 0; i < _sportsmen.Length; i++)
                     {
-                        if (_sportsmen[i].Place < max) max = _sportsmen[i].Place;
+                        if (_sportsmen[i].Place < max && _sportsmen[i].Place > 0) max = _sportsmen[i].Place;
                     }
                     return max;
                 }
@@ -118,7 +118,8 @@ namespace Lab_6
                         if (teams[j].SummaryScore < teams[j + 1].SummaryScore)
                         {
                             (teams[j], teams[j + 1]) = (teams[j + 1], teams[j]);
-                        } else if (teams[j].SummaryScore == teams[j + 1].SummaryScore && teams[j].TopPlace > teams[j + 1].TopPlace)
+                        }
+                        else if (teams[j].SummaryScore == teams[j + 1].SummaryScore && teams[j].TopPlace > teams[j + 1].TopPlace)
                         {
                             (teams[j], teams[j + 1]) = (teams[j + 1], teams[j]);
                         }

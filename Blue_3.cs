@@ -17,7 +17,7 @@ namespace Lab_6
             public string Name => _name;
             public string Surname => _surname;
 
-            public int[] PenaltyTime
+            public int[] PenaltyTimes
             {
                 get
                 {
@@ -110,4 +110,3 @@ namespace Lab_6
         }
     }
 }
-
